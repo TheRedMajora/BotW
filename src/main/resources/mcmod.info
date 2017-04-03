@@ -1,0 +1,16 @@
+[
+{
+  "modid": "botw",
+  "name": "Breath of the Wild",
+  "description": "The mod for Minecraft.",
+  "version": "1.0",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["TheRedMajora"],
+  "credits": "Nintendo, for the great game.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

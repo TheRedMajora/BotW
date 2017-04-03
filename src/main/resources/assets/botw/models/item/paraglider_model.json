@@ -1,0 +1,104 @@
+{
+    "textures": {
+        "cloth": "botw:items/paraglider/cloth",
+        "cloth_below": "botw:items/paraglider/cloth_below",
+        "stick": "botw:items/paraglider/stick"
+    },
+    "elements": [
+        {
+            "name": "Cloth",
+            "from": [ 2.0, 2.0, 2.5 ], 
+            "to": [ 14.0, 3.0, 12.5 ], 
+            "faces": {
+                "north": { "texture": "#cloth", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "east": { "texture": "#cloth", "uv": [ 16.0, 0.0, 14.0, 16.0 ], "rotation": 270 },
+                "south": { "texture": "#cloth", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "west": { "texture": "#cloth", "uv": [ 14.0, 0.0, 16.0, 16.0 ], "rotation": 90 },
+                "up": { "texture": "#cloth", "uv": [ 0.0, 0.0, 15.0, 16.0 ] },
+                "down": { "texture": "#cloth_below", "uv": [ 15.0, 0.0, 0.0, 16.0 ] }
+            }
+        },
+        {
+            "name": "NorthStick",
+            "from": [ 1.5, 1.5, 2.0 ], 
+            "to": [ 14.5, 2.5, 3.0 ], 
+            "faces": {
+                "north": { "texture": "#stick", "uv": [ 0.0, 0.0, 16.0, 8.0 ] },
+                "east": { "texture": "#stick", "uv": [ 16.0, 8.0, 8.0, 16.0 ] },
+                "south": { "texture": "#stick", "uv": [ 0.0, 0.0, 16.0, 8.0 ] },
+                "west": { "texture": "#stick", "uv": [ 8.0, 8.0, 16.0, 16.0 ] },
+                "up": { "texture": "#stick", "uv": [ 0.0, 0.0, 16.0, 8.0 ], "rotation": 180 },
+                "down": { "texture": "#stick", "uv": [ 0.0, 0.0, 16.0, 8.0 ], "rotation": 180 }
+            }
+        },
+        {
+            "name": "SouthStick",
+            "from": [ 2.5, 1.5, 12.5 ], 
+            "to": [ 13.5, 2.5, 13.5 ], 
+            "faces": {
+                "north": { "texture": "#stick", "uv": [ 0.0, 0.0, 16.0, 8.0 ] },
+                "east": { "texture": "#stick", "uv": [ 8.0, 8.0, 16.0, 16.0 ] },
+                "south": { "texture": "#stick", "uv": [ 0.0, 0.0, 16.0, 8.0 ] },
+                "west": { "texture": "#stick", "uv": [ 8.0, 8.0, 16.0, 16.0 ] },
+                "up": { "texture": "#stick", "uv": [ 0.0, 0.0, 16.0, 8.0 ] },
+                "down": { "texture": "#stick", "uv": [ 0.0, 0.0, 16.0, 8.0 ] }
+            }
+        },
+        {
+            "name": "SouthLeftHandle",
+            "from": [ 3.5, 1.0, 7.5 ], 
+            "to": [ 4.5, 2.0, 13.5 ], 
+            "rotation": { "origin": [ 8.0, 0.0, 12.0 ], "axis": "x", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "east": { "texture": "#stick", "uv": [ 8.0, 8.0, 0.0, 16.0 ] },
+                "south": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "west": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "up": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "down": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] }
+            }
+        },
+        {
+            "name": "SouthRightHandle",
+            "from": [ 11.5, 1.0, 7.5 ], 
+            "to": [ 12.5, 2.0, 13.5 ], 
+            "rotation": { "origin": [ 8.0, 0.0, 12.0 ], "axis": "x", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "east": { "texture": "#stick", "uv": [ 8.0, 8.0, 0.0, 16.0 ] },
+                "south": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "west": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "up": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "down": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] }
+            }
+        },
+        {
+            "name": "NorthRightHandle",
+            "from": [ 11.5, -2.5, 2.5 ], 
+            "to": [ 12.5, -1.5, 8.5 ], 
+            "rotation": { "origin": [ 8.0, 0.0, 12.0 ], "axis": "x", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "east": { "texture": "#stick", "uv": [ 8.0, 8.0, 0.0, 16.0 ] },
+                "south": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "west": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "up": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "down": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] }
+            }
+        },
+        {
+            "name": "NorthLeftHandle",
+            "from": [ 3.5, -2.5, 2.5 ], 
+            "to": [ 4.5, -1.5, 8.5 ], 
+            "rotation": { "origin": [ 8.0, 0.0, 12.0 ], "axis": "x", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "east": { "texture": "#stick", "uv": [ 8.0, 8.0, 0.0, 16.0 ] },
+                "south": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "west": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "up": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] },
+                "down": { "texture": "#stick", "uv": [ 0.0, 8.0, 8.0, 16.0 ] }
+            }
+        }
+    ]
+}

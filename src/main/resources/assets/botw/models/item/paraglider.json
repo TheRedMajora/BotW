@@ -1,0 +1,47 @@
+{
+    "parent": "botw:item/paraglider_model",
+    "display":
+	{
+		"thirdperson_righthand": {
+			"rotation": [ 272, 350, 356 ],
+			"translation": [ -3.25, -3.25, -12.50 ],
+			"scale": [ 1.47, 1.60, 1.60 ]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 0, 180, 0 ],
+			"translation": [ 0.00, 6.50, 0.00 ],
+			"scale": [ 0.50, 1.00, 0.50 ]
+		},
+		"firstperson_righthand": {
+			"rotation": [ 352, 0, 0 ],
+			"translation": [ -9.00, 25.00, 5.25 ],
+			"scale": [ 1.85, 1.85, 1.85 ]
+		},
+		"firstperson_lefthand": {
+			"rotation": [ 352, 6, 10 ],
+			"translation": [ -1.25, 6.75, -2.00 ],
+			"scale": [ 1.00, 1.00, 1.00 ]
+		},
+		"gui":
+		{
+			"rotation": [ 50, 346, 0 ],
+			"translation": [ -0.25, 4.75, 0.00 ],
+			"scale": [ 1.05, 1.50, 1.25 ]
+		},
+		"head": {
+			"rotation": [ 0, 0, 0 ],
+			"translation": [ 0.25, 20.50, 0.00 ],
+			"scale": [ 1.50, 2.50, 1.50 ]
+		},
+		"fixed": {
+			"rotation": [ 276, 180, 0 ],
+			"translation": [ 0.00, 0.50, -8.00 ],
+			"scale": [ 1.35, 1.20, 1.35 ]
+		},
+		"ground": {
+			"rotation": [ 0, 0, 0 ],
+			"translation": [ 0.00, 6.25, 0.00 ],
+			"scale": [ 1.10, 1.00, 1.00 ]
+		}
+	}
+}

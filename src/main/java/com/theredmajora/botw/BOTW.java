@@ -2,6 +2,7 @@ package com.theredmajora.botw;
 
 import com.theredmajora.botw.blocks.BOTWBlocks;
 import com.theredmajora.botw.items.BOTWItems;
+import com.theredmajora.botw.packet.BOTWPacketHandler;
 import com.theredmajora.botw.proxy.CommonProxy;
 import com.theredmajora.botw.render.player.ModelRendererBase;
 import com.theredmajora.botw.render.player.PlayerRendererBase;
@@ -10,6 +11,7 @@ import com.theredmajora.botw.tileentities.TileEntityTempIce;
 import api.player.model.ModelPlayerAPI;
 import api.player.render.RenderPlayerAPI;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -40,7 +42,9 @@ public class BOTW
     	BOTWBlocks.init();
     	BOTWItems.init();
     	BOTWKeyHandler.init();
+    	BOTWPacketHandler.init();
     	proxy.init();
 		MinecraftForge.EVENT_BUS.register(new BOTWEvents());
+		
     }
 }

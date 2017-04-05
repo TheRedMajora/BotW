@@ -16,6 +16,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -108,4 +109,11 @@ public class BOTWEvents
 			}
 		}
 	}
+	
+	@SubscribeEvent
+	public void onPlayerJoined(PlayerEvent.PlayerLoggedInEvent event) //will update all players if it has the slate in the inventory
+	{
+		
+	}
+	
 }

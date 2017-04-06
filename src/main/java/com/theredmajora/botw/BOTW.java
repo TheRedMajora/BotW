@@ -1,6 +1,7 @@
 package com.theredmajora.botw;
 
 import com.theredmajora.botw.blocks.BOTWBlocks;
+import com.theredmajora.botw.capability.itemtracker.CapabilityItemTracker;
 import com.theredmajora.botw.items.BOTWItems;
 import com.theredmajora.botw.packet.BOTWPacketHandler;
 import com.theredmajora.botw.proxy.CommonProxy;
@@ -43,6 +44,7 @@ public class BOTW
     	BOTWItems.init();
     	BOTWKeyHandler.init();
     	BOTWPacketHandler.init();
+    	CapabilityItemTracker.register();
     	proxy.init();
 		MinecraftForge.EVENT_BUS.register(new BOTWEvents());
 		

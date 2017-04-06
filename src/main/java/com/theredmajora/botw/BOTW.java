@@ -1,6 +1,7 @@
 package com.theredmajora.botw;
 
 import com.theredmajora.botw.blocks.BOTWBlocks;
+
 import com.theredmajora.botw.capability.itemtracker.CapabilityItemTracker;
 import com.theredmajora.botw.items.BOTWItems;
 import com.theredmajora.botw.packet.BOTWPacketHandler;

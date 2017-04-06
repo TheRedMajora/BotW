@@ -181,9 +181,4 @@ public class BOTWEvents
 
 		return hasRender;
 	}
-	
-	
-
-
-
 }

@@ -13,8 +13,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 
 import com.theredmajora.botw.capability.itemtracker.CapabilityItemTracker;
 import com.theredmajora.botw.capability.itemtracker.IItemTracker;
-import com.theredmajora.botw.packet.ExampleClientPacket;
-import com.theredmajora.botw.packet.ExampleServerPacket;
+import com.theredmajora.botw.proxy.ClientProxy;
 import com.theredmajora.botw.util.ItemTrackerPacketData;
 
 public class UpdateClientPacket implements IMessage, IMessageHandler<UpdateClientPacket, IMessage> { 
@@ -34,8 +33,6 @@ public class UpdateClientPacket implements IMessage, IMessageHandler<UpdateClien
 	@Override
 	public IMessage onMessage(final UpdateClientPacket message, MessageContext ctx) {
 
-		//To get the player instance you must schedule the main thread to run the runnable code
-		//reason is because packets are not run on the minecraft thread! therefore Minecraft.getMinecraft().thePlayer is null! 
 		IThreadListener mainThread = Minecraft.getMinecraft();
 		mainThread.addScheduledTask(new Runnable() {
 
@@ -44,20 +41,15 @@ public class UpdateClientPacket implements IMessage, IMessageHandler<UpdateClien
 				EntityPlayer p = Minecraft.getMinecraft().thePlayer; //now this player instance is real
 				World world = p.worldObj;	
 
-				for(ItemTrackerPacketData data : nearbyPlayers)
+				for(ItemTrackerPacketData data : message.nearbyPlayers)
 				{
-					EntityPlayer player = (EntityPlayer) world.getEntityByID(data.getPlayerID());
-					if(player != null)
+					if(data != null)
 					{
 						boolean render[] = data.getRender();
-						IItemTracker tracker = player.getCapability(CapabilityItemTracker.BOTW_CAP, null);
-						
-						tracker.setShouldRenderSlate(render[0]);  
-						tracker.setShouldRenderGlider(render[1]);
-						tracker.setShouldRenderBow(render[2]); 
+						EntityPlayer player = (EntityPlayer) world.getEntityByID(data.getPlayerID());
+						ClientProxy.addShouldRender(player.getName(), render);
 					}
 				}
-
 			}
 		});
 

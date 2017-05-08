@@ -9,7 +9,6 @@ import com.theredmajora.botw.proxy.CommonProxy;
 import com.theredmajora.botw.render.player.ModelRendererBase;
 import com.theredmajora.botw.render.player.PlayerRendererBase;
 import com.theredmajora.botw.tileentities.TileEntityTempIce;
-
 import api.player.model.ModelPlayerAPI;
 import api.player.render.RenderPlayerAPI;
 import net.minecraftforge.common.MinecraftForge;
@@ -41,6 +40,7 @@ public class BOTW
     {	
     	RenderPlayerAPI.register(BOTW.MODID, PlayerRendererBase.class);
     	ModelPlayerAPI.register(BOTW.MODID, ModelRendererBase.class);
+    	
     	BOTWBlocks.init();
     	BOTWItems.init();
     	BOTWKeyHandler.init();

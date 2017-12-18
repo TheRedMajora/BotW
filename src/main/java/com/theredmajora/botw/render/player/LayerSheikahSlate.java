@@ -1,5 +1,7 @@
 package com.theredmajora.botw.render.player;
 
+import com.theredmajora.botw.capability.itemtracker.CapabilityItemTracker;
+import com.theredmajora.botw.capability.itemtracker.IItemTracker;
 import com.theredmajora.botw.items.ItemSheikahSlate;
 
 import net.minecraft.client.entity.AbstractClientPlayer;
@@ -31,34 +33,27 @@ public class LayerSheikahSlate implements LayerRenderer<AbstractClientPlayer>
 		renderPlayer.bindTexture(TEXTURE_SLATE);
     	EntityPlayer player = (EntityPlayer) entitylivingbaseIn;
 
-        for (ItemStack stack : player.inventory.mainInventory)
+    	IItemTracker tracker = player.getCapability(CapabilityItemTracker.BOTW_CAP, null);
+    	
+        if(tracker.shouldRenderSlate())
         {
-        	if (stack != null && stack.getItem() instanceof ItemSheikahSlate)
-    		{
-                stack = player.inventory.getCurrentItem();
-                if(!(stack != null && stack.getItem() instanceof ItemSheikahSlate))
-                {
-                	{
-                        GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-                        GlStateManager.enableBlend();
-                        GlStateManager.pushMatrix();
-                        GlStateManager.scale(0.4, 0.4, 0.4);
-                        GlStateManager.translate(0.65F, 1.1F, 0F);
-                        GlStateManager.rotate(270F, 0F, 1F, 0F);
-                        if(entitylivingbaseIn.isSneaking())
-                        {
-                        	GlStateManager.rotate(40F, 0F, 0F, -1F);
-                        	GlStateManager.translate(0.0F, 0.45F, 0.0F);
-                        }
-                        RenderHelper.enableStandardItemLighting();
-                        this.modelSlate.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale, entitylivingbaseIn);
-                        this.modelSlate.render(entitylivingbaseIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
-                        RenderHelper.disableStandardItemLighting();
-                        GlStateManager.popMatrix();
-                    }
-                }
-    		}
-    	}
+        	GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+        	GlStateManager.enableBlend();
+        	GlStateManager.pushMatrix();
+        	GlStateManager.scale(0.4, 0.4, 0.4);
+        	GlStateManager.translate(0.65F, 1.1F, 0F);
+        	GlStateManager.rotate(270F, 0F, 1F, 0F);
+        	if(entitylivingbaseIn.isSneaking())
+        	{
+        		GlStateManager.rotate(40F, 0F, 0F, -1F);
+        		GlStateManager.translate(0.0F, 0.45F, 0.0F);
+        	}
+        	RenderHelper.enableStandardItemLighting();
+        	this.modelSlate.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale, entitylivingbaseIn);
+        	this.modelSlate.render(entitylivingbaseIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
+        	RenderHelper.disableStandardItemLighting();
+        	GlStateManager.popMatrix();
+        }
     }
     
     public boolean shouldCombineTextures()

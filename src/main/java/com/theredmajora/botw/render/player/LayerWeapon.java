@@ -1,5 +1,8 @@
 package com.theredmajora.botw.render.player;
 
+import com.theredmajora.botw.capability.itemtracker.CapabilityItemTracker;
+import com.theredmajora.botw.capability.itemtracker.IItemTracker;
+
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -30,8 +33,9 @@ public class LayerWeapon implements LayerRenderer<AbstractClientPlayer>
 	public void doRenderLayer(AbstractClientPlayer entitylivingbaseIn, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch, float scale)
     {	
     	EntityPlayer player = (EntityPlayer) entitylivingbaseIn;
+    	IItemTracker tracker = player.getCapability(CapabilityItemTracker.BOTW_CAP, null);
 
-        for (ItemStack stack : player.inventory.mainInventory)
+        for (ItemStack stack : tracker.getRenderingItemStacks())
         {
         	if (stack != null)
     		{
